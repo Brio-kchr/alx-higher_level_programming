@@ -6,7 +6,5 @@
 
 def print_sorted_dictionary(a_dictionary):
     if type(a_dictionary) is dict:
-        keys = list(a_dictionary.keys())
-        keys.sort()
-        for x in keys:
-            print("{} : {}".format(x, a_dictionary[x]))
+        for x, y in sorted(a_dictionary.items()):
+            print("{} : {}".format(x, y))
