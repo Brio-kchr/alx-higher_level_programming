@@ -1,5 +1,5 @@
--- script that lists all cities contained in the database hbtn_0d_usa
-SELECT cities.id, cities.name, states.name FROM cities C
-	LEFT OUTER JOIN states S
-	ON C.state_id = S.id
-	ORDER BY C.id ASC;
+-- A script that lists all cities contained in the database hbtn_0d_usa
+--  aech with their state_name instead of state_ id
+SELECT `cities`.`id`, `cities`.`name`, `states`.`name` FROM cities
+    LEFT JOIN states ON `cities`.`state_id` = `states`.`id`
+    ORDER BY `cities`.`id` ASC;
