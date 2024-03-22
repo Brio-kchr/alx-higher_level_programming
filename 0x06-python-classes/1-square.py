@@ -4,15 +4,15 @@ Class module to define a square
 Instantiated with size (no type/value verification)
 """
 
+
 class Square:
     """
     Class that defines a square
-    With a private instance attr size    
-    
+    With a private instance attr size
+
     Attrs:
         self.__size: side length of a square instance
     """
-    __size = None
 
     def __init__(self, size=None):
         """
@@ -23,6 +23,7 @@ class Square:
         """
         # Private instace attribute
         self.__size = size
+
 
 if __name__ == "__main__":
     my_square = Square(3)
