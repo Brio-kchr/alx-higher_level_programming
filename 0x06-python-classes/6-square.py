@@ -14,15 +14,15 @@ class Square:
         self.__size: side length of a square instance
     """
 
-    def __init__(self, size=0, position=(0, 0):
+    def __init__(self, size=0, position=(0, 0)):
         """
         Method to initialize and set square size
 
         Args:
             size: sides of a square legth
         """
-        self.size = size
-        self.position = position
+        self.__size = size
+        self.__position = position
 
     @property
     def size(self):
@@ -54,11 +54,8 @@ class Square:
         """
         sets position value
         """
-        if (type(value) is not tuple) or (len(position) != 2) or\
-                (type(position[0] != int)) or (position[0] < 0) or\
-                (type(position[1] != int)) or (position[1] < 0):
+        if type(value) is not tuple:
             raise(TypeError('position must be a tuple of 2 positive integers'))
-        self.__position = position
         
 
     def area(self):
@@ -72,14 +69,10 @@ class Square:
         Prints in stdout the square with character #
         """
         if self.__size == 0:
-            print("")
+            print()
         else:
-            for y in range(0, self.__position[1]):
-                print("")
-            for i in range(0, self.__size):
-                for x in range(0, self.position[0]):
-                    print(" ",end="")
-                for j in range(0, self.__size):
+            for i in range(self.__size):
+                for j in range(self.__size):
                     print("#", end="")
                 print("")
 
