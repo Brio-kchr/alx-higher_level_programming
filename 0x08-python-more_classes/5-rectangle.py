@@ -101,7 +101,6 @@ class Rectangle:
 
 if __name__ == "__main__":
     my_rect = Rectangle(2, 4)
-    
     print("__")
     print(str(my_rect))
     print("__")
@@ -116,4 +115,4 @@ if __name__ == "__main__":
     try:
         print(my_rect)
     except Exception as e:
-        print ("[{}] {}".format(e.__class__.__name__, e))
+        print("[{}] {}".format(e.__class__.__name__, e))

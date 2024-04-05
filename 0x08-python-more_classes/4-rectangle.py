@@ -95,7 +95,6 @@ class Rectangle:
 
 if __name__ == "__main__":
     my_rect = Rectangle(2, 4)
-    
     print("__")
     print(str(my_rect))
     print("__")
