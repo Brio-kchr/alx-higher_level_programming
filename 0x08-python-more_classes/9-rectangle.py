@@ -104,6 +104,7 @@ class Rectangle:
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
 
+    @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """
         Returns the biggest rect based on the area
@@ -117,11 +118,13 @@ class Rectangle:
         else:
             return rect_1
 
+    @classmethod
     def square(cls, size=0):
         """
         Returns a new Rectangle instance with width == height == size
         """
         return cls(size, size)
+
 
 if __name__ == "__main__":
     my_rect = Rectangle(8, 4)
