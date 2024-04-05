@@ -9,14 +9,18 @@ class Rectangle:
     Class to define a rectangle
 
     Attrs:
-        width - width of rect
-            -Must be int., > 0
-        height - height of the rect
-            -Must be int., > 0
+        width: getter and setter for self.__width
+        height: getter and setter for self.__height
+        self.__height (interger): height of a rect
+        self.__width (interger): width of a rect
     """
     def __init__(self, width=0, height=0):
         """
         Defines the height and width of our rect
+
+        Args:
+            height (interger): height of a rect instance
+            width (interger): width of a rectangle instance
         """
         self.width = width
         self.height = height
@@ -26,7 +30,7 @@ class Rectangle:
         """
         To retrieve rect width
         """
-        return self.width
+        return self.__width
 
     @width.setter
     def width(self, width):
@@ -44,7 +48,7 @@ class Rectangle:
         """
         To get rect's height
         """
-        return self.height
+        return self.__height
 
     @height.setter
     def height(self, height):
