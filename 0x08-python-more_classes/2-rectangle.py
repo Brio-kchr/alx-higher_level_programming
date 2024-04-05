@@ -76,6 +76,5 @@ class Rectangle:
 if __name__ == "__main__":
     my_rect = Rectangle(2, 4)
 
-
     my_rect.width = 10
     my_rect.height = 3
