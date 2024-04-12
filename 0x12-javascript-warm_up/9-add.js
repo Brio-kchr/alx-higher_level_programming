@@ -2,11 +2,11 @@
 
 const { argv } = require('node:process');
 
-let a = +argv[2];
-let b = +argv[3];
+const a = +argv[2];
+const b = +argv[3];
 
-function add(a,b) {
-  sum = a + b;
+function add (a, b) {
+  const sum = a + b;
   return sum;
 }
 console.log(add(a, b));
