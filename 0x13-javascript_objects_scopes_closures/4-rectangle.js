@@ -4,7 +4,7 @@ class Rectangle {
   // Class that defines a rectangle
 
   constructor (w, h) {
-    if ((w > 1 && h > 1) && (w && h)) {
+    if ((w > 0 && h > 0) && (w && h)) {
       this.width = w;
       this.height = h;
     }
@@ -12,17 +12,12 @@ class Rectangle {
 
   print () {
     for (let i = 0; i < this.height; i++) {
-      for (let j = 0; j < this.width; j++) {
-        process.stdout.write('X');
-      }
-      console.log();
+      console.log('X'.repeat(this.width));
     }
   }
 
   rotate () {
-    const a = this.width;
-    this.width = this.height;
-    this.height = a;
+    [this.width, this.height] = [this.height, this.width];  
   }
 
   double () {
