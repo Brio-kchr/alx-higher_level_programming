@@ -29,3 +29,20 @@ def find_state(
     cur.close()
     conn.close()
     return query_rows
+
+
+if __name__ == "__main__":
+    """
+    When running as a script, use command line arguments as
+     function inputs and print output to screen
+    """
+    n = len(argv)
+    if n != 5:
+        print(
+            "Usage: {} mysql_username ".format(argv[0]) +
+            "mysql_password database_name state_name"
+        )
+    else:
+        states = find_state(argv[1], argv[2], argv[3], argv[4])
+        for state in states:
+            print(state)
