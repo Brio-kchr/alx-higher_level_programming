@@ -11,8 +11,9 @@ def post_url(url: str, data: dict):
     """
     Posts data to the provided url and prints the body
     """
-    response = requests.post(url, json = data)
+    response = requests.post(url, data=data)
     print(response.text)
+
 
 if __name__ == "__main__":
     from sys import argv

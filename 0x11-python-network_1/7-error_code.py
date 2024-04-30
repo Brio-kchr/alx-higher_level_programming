@@ -17,6 +17,7 @@ def req_url(url: str):
     else:
         print(response.text)
 
+
 if __name__ == "__main__":
     from sys import argv
 
