@@ -22,9 +22,13 @@ def post_url(url: str, data: dict):
 if __name__ == "__main__":
     from sys import argv
 
-    data = {"q": ""}
-    if len(argv) > 1:
+    if len(argv) == 1:
+        data = {"q": ""}
+    elif not isinstance(argv[1], str):
+        print('No result')
+    else:
         data.update({"q": argv[2]})
+
     res = post_url("http://0.0.0.0:5000/search_user", data)
     if res is None:
         print("No result")
